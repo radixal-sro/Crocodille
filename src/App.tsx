@@ -6,6 +6,7 @@ import { CartProvider } from './context/CartContext';
 import Dashboard from './pages/Dashboard';
 import Catalog from './pages/Catalog';
 import Orders from './pages/Orders';
+import OrderDetail from './pages/OrderDetail';
 import Inventory from './pages/Inventory';
 import Production from './pages/Production';
 import Logistics from './pages/Logistics';
@@ -20,6 +21,7 @@ function App() {
                         <Route index element={<Dashboard />} />
                         <Route path="catalog" element={<Catalog />} />
                         <Route path="orders" element={<Orders />} />
+                        <Route path="orders/:orderId" element={<OrderDetail />} />
                         <Route path="inventory" element={<Inventory />} />
                         <Route path="production" element={<Production />} />
                         <Route path="logistics" element={<Logistics />} />

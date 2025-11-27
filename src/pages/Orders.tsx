@@ -6,10 +6,12 @@ import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
 import { Eye, Loader2 } from 'lucide-react';
 import { Card } from '../components/ui/Card';
+import { useNavigate } from 'react-router-dom';
 
 const Orders = () => {
     const [orders, setOrders] = useState<Order[]>([]);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const loadOrders = async () => {
@@ -102,7 +104,12 @@ const Orders = () => {
                                         </Badge>
                                     </TableCell>
                                     <TableCell className="text-right">
-                                        <Button variant="ghost" size="sm" icon={<Eye size={16} />}>
+                                        <Button
+                                            variant="ghost"
+                                            size="sm"
+                                            icon={<Eye size={16} />}
+                                            onClick={() => navigate(`/orders/${order.id}`)}
+                                        >
                                             Detail
                                         </Button>
                                     </TableCell>
