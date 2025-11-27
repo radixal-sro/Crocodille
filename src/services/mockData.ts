@@ -1,10 +1,10 @@
-import type { Product, Order, User, InventoryItem } from '../types';
+import type { Product, Order, User } from '../types';
 
 export const MOCK_USERS: User[] = [
     { id: 'u1', name: 'Jan Novák', role: 'CEO', avatar: 'https://i.pravatar.cc/150?u=u1' },
     { id: 'u2', name: 'Petr Svoboda', role: 'MANAGER', branchId: 'b1', avatar: 'https://i.pravatar.cc/150?u=u2' },
     { id: 'u3', name: 'Jana Dvořáková', role: 'WAREHOUSE', branchId: 'b2', avatar: 'https://i.pravatar.cc/150?u=u3' },
-    { id: 'u4', name: 'Martin Kučera', role: 'DRIVER', branchId: 'b3', avatar: 'https://i.pravatar.cc/150?u=u4' },
+    { id: 'u4', name: 'Martin Kučera', role: 'WAREHOUSE', branchId: 'b3', avatar: 'https://i.pravatar.cc/150?u=u4' },
     { id: 'u5', name: 'Lucie Veselá', role: 'MANAGER', branchId: 'b4', avatar: 'https://i.pravatar.cc/150?u=u5' },
 ];
 
@@ -214,5 +214,44 @@ export const MOCK_ORDERS: Order[] = [
             { productId: 'p6', productName: 'Sendvič Tuňákový', quantity: 20, price: 79 },
         ],
         totalPrice: 3955
+    }
+];
+
+export const mockProductionTasks: import('../types').ProductionTask[] = [
+    {
+        id: 't1',
+        productName: 'Bageta Šunková',
+        quantity: 150,
+        unit: 'ks',
+        priority: 'HIGH',
+        startTime: '06:00',
+        assignedTo: 'Jan K.',
+        status: 'IN_PROGRESS'
+    },
+    {
+        id: 't2',
+        productName: 'Crocodille Sendvič',
+        quantity: 80,
+        unit: 'ks',
+        priority: 'NORMAL',
+        startTime: '08:00',
+        status: 'PLANNED'
+    },
+    {
+        id: 't3',
+        productName: 'Panini s kuřecím',
+        quantity: 200,
+        unit: 'ks',
+        priority: 'LOW',
+        status: 'PLANNED'
+    },
+    {
+        id: 't4',
+        productName: '360 Pizza Salami',
+        quantity: 50,
+        unit: 'ks',
+        priority: 'NORMAL',
+        startTime: '10:00',
+        status: 'COMPLETED'
     }
 ];

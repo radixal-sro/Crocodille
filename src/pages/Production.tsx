@@ -1,27 +1,19 @@
-import React, { useState } from 'react';
-import { KanbanColumn } from '../components/production/KanbanColumn';
-import type { ProductionTask } from '../components/production/ProductionCard';
-import { Button } from '../components/ui/Button';
+import { useState } from 'react';
 import { Plus, Filter } from 'lucide-react';
-
-const MOCK_TASKS: ProductionTask[] = [
-    { id: 'P-101', productName: 'Bageta Šunková', quantity: 150, unit: 'ks', priority: 'HIGH', startTime: '06:00', assignedTo: 'Tým A' },
-    { id: 'P-102', productName: 'Sendvič Kuřecí', quantity: 80, unit: 'ks', priority: 'NORMAL', startTime: '07:30', assignedTo: 'Tým B' },
-    { id: 'P-103', productName: 'Pizza Šunková', quantity: 40, unit: 'ks', priority: 'LOW', startTime: '09:00' },
-    { id: 'P-104', productName: 'Bageta Sýrová', quantity: 120, unit: 'ks', priority: 'NORMAL', startTime: '08:00', assignedTo: 'Tým A' },
-    { id: 'P-105', productName: 'Wrap Caesar', quantity: 60, unit: 'ks', priority: 'HIGH', startTime: '10:00' },
-];
+import { Button } from '../components/ui/Button';
+import { KanbanColumn } from '../components/production/KanbanColumn';
+import { mockProductionTasks } from '../services/mockData';
 
 const Production = () => {
-    const [tasks, setTasks] = useState(MOCK_TASKS);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [tasks] = useState(mockProductionTasks);
 
-    // Simple state simulation for the prototype
-    const plannedTasks = tasks.filter(t => !t.assignedTo && t.startTime > '08:30'); // Just a mock filter logic
-    const inProgressTasks = tasks.filter(t => t.assignedTo && t.priority !== 'LOW');
-    const completedTasks = tasks.filter(t => t.priority === 'LOW'); // Mock logic
+    const plannedTasks = tasks.filter(t => t.status === 'PLANNED' && t.startTime);
+    const inProgressTasks = tasks.filter(t => t.status === 'IN_PROGRESS');
+    const completedTasks = tasks.filter(t => t.status === 'COMPLETED');
 
     return (
-        <div className="h-[calc(100vh-8rem)] flex flex-col">
+        <div className="h-[calc(100vh-6rem)] flex flex-col">
             <div className="flex justify-between items-center mb-6">
                 <div>
                     <h1 className="text-2xl font-display font-bold text-slate-900">Plán výroby</h1>
@@ -37,19 +29,16 @@ const Production = () => {
                 <KanbanColumn
                     title="Naplánováno"
                     tasks={plannedTasks}
-                    status="PLANNED"
                     color="bg-slate-100"
                 />
                 <KanbanColumn
                     title="Ve výrobě"
                     tasks={inProgressTasks}
-                    status="IN_PROGRESS"
                     color="bg-amber-50"
                 />
                 <KanbanColumn
                     title="Hotovo"
                     tasks={completedTasks}
-                    status="COMPLETED"
                     color="bg-green-50"
                 />
             </div>

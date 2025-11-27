@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card } from '../ui/Card';
 import { AlertTriangle, Package, Truck, CheckCircle } from 'lucide-react';
 import clsx from 'clsx';

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { OrderService } from '../services';
 import type { Order } from '../types';
 import { Table, TableHeader, TableRow, TableHead, TableCell } from '../components/ui/Table';

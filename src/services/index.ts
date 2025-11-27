@@ -9,6 +9,11 @@ export const ProductService = {
         return [...MOCK_PRODUCTS];
     },
 
+    getInventory: async (): Promise<Product[]> => {
+        await new Promise(resolve => setTimeout(resolve, DELAY));
+        return [...MOCK_PRODUCTS];
+    },
+
     getById: async (id: string): Promise<Product | undefined> => {
         await new Promise(resolve => setTimeout(resolve, DELAY));
         return MOCK_PRODUCTS.find(p => p.id === id);

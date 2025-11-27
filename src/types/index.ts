@@ -58,3 +58,14 @@ export interface KPI {
     trend: 'UP' | 'DOWN' | 'NEUTRAL';
     period: string;
 }
+
+export interface ProductionTask {
+    id: string;
+    productName: string;
+    quantity: number;
+    unit: string;
+    priority: 'HIGH' | 'NORMAL' | 'LOW';
+    startTime?: string;
+    assignedTo?: string;
+    status: 'PLANNED' | 'IN_PROGRESS' | 'COMPLETED';
+}

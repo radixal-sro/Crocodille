@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
-    LayoutDashboard,
     ShoppingBag,
     ClipboardList,
     Package,
     Factory,
     Truck,
     Users,
-    LogOut,
-    Settings,
-    ChevronLeft,
-    ChevronRight
+    ChevronRight,
+    ChevronLeft
 } from 'lucide-react';
-import { motion } from 'framer-motion';
 import clsx from 'clsx';
 
 const NAV_ITEMS = [
-    { icon: LayoutDashboard, label: 'Přehled', path: '/' },
     { icon: ShoppingBag, label: 'Katalog', path: '/catalog' },
     { icon: ClipboardList, label: 'Objednávky', path: '/orders' },
     { icon: Package, label: 'Sklad', path: '/inventory' },

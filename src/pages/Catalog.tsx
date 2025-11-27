@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { CatalogFilters } from '../components/catalog/CatalogFilters';
 import { ProductCard } from '../components/catalog/ProductCard';
 import { CartSidebar } from '../components/catalog/CartSidebar';

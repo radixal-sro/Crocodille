@@ -1,4 +1,3 @@
-import React from 'react';
 import { KPICard } from '../components/dashboard/KPICard';
 import { SalesChart } from '../components/dashboard/SalesChart';
 import { ActivityFeed } from '../components/dashboard/ActivityFeed';

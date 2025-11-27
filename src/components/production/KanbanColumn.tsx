@@ -1,22 +1,20 @@
-import React from 'react';
+import type { ProductionTask } from '../../types';
 import { ProductionCard } from './ProductionCard';
-import type { ProductionTask } from './ProductionCard';
-import clsx from 'clsx';
 
 interface KanbanColumnProps {
     title: string;
-    tasks: ProductionTask[];
-    status: 'PLANNED' | 'IN_PROGRESS' | 'COMPLETED';
+    count?: number;
     color: string;
+    tasks: ProductionTask[];
     onTaskClick?: (task: ProductionTask) => void;
 }
 
-export const KanbanColumn = ({ title, tasks, status, color, onTaskClick }: KanbanColumnProps) => {
+export const KanbanColumn = ({ title, color, tasks, onTaskClick }: KanbanColumnProps) => {
     return (
-        <div className="flex-1 min-w-[300px] flex flex-col h-full bg-slate-50/50 rounded-xl border border-slate-200/60">
-            <div className={clsx("p-3 border-b border-slate-100 rounded-t-xl flex justify-between items-center", color)}>
-                <h3 className="font-medium text-slate-900">{title}</h3>
-                <span className="bg-white/50 px-2 py-0.5 rounded-full text-xs font-bold text-slate-700">
+        <div className="flex flex-col bg-slate-50 rounded-xl border border-slate-200 h-full min-w-[320px]">
+            <div className={`p-4 border-b border-slate-200 flex items-center justify-between ${color}`}>
+                <h3 className="font-semibold text-slate-800">{title}</h3>
+                <span className="bg-white/50 px-2 py-0.5 rounded text-sm font-medium text-slate-700">
                     {tasks.length}
                 </span>
             </div>

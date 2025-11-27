@@ -1,8 +1,6 @@
-import React from 'react';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-import { Truck, MapPin, Clock, CheckCircle } from 'lucide-react';
-import clsx from 'clsx';
+import { Truck, MapPin, Clock } from 'lucide-react';
 
 const ROUTES = [
     { id: 'R-001', driver: 'Petr Svoboda', destination: 'Centrála - Praha', status: 'DELIVERED', time: '06:30' },

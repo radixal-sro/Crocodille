@@ -1,4 +1,3 @@
-import React from 'react';
 import { Search, Bell, MapPin } from 'lucide-react';
 
 export const Header = () => {

@@ -1,28 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { Search, AlertTriangle } from 'lucide-react';
+import { Card } from '../components/ui/Card';
 import { Table, TableHeader, TableRow, TableHead, TableCell } from '../components/ui/Table';
 import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Search, AlertTriangle, ArrowRight } from 'lucide-react';
+import clsx from 'clsx';
 import { ProductService } from '../services';
 import type { Product } from '../types';
-import clsx from 'clsx';
 
 const Inventory = () => {
     const [products, setProducts] = useState<Product[]>([]);
-    const [loading, setLoading] = useState(true);
     const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
         const loadInventory = async () => {
-            setLoading(true);
             try {
-                const data = await ProductService.getAll();
+                const data = await ProductService.getInventory();
                 setProducts(data);
             } catch (error) {
                 console.error('Failed to load inventory', error);
-            } finally {
-                setLoading(false);
             }
         };
         loadInventory();

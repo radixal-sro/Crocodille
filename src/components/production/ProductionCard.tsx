@@ -1,18 +1,6 @@
-import React from 'react';
-import { Clock, Users, AlertCircle } from 'lucide-react';
-import { Card } from '../ui/Card';
+import { Clock, Users } from 'lucide-react';
 import { Badge } from '../ui/Badge';
-import clsx from 'clsx';
-
-export interface ProductionTask {
-    id: string;
-    productName: string;
-    quantity: number;
-    unit: string;
-    priority: 'HIGH' | 'NORMAL' | 'LOW';
-    startTime?: string;
-    assignedTo?: string;
-}
+import type { ProductionTask } from '../../types';
 
 interface ProductionCardProps {
     task: ProductionTask;

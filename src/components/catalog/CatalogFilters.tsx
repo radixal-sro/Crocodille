@@ -1,6 +1,4 @@
-import React from 'react';
-import { Search, Filter } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Search } from 'lucide-react';
 import clsx from 'clsx';
 
 const CATEGORIES = [
