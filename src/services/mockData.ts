@@ -6,6 +6,17 @@ export const MOCK_USERS: User[] = [
     { id: 'u3', name: 'Jana Dvořáková', role: 'WAREHOUSE', branchId: 'b2', avatar: 'https://i.pravatar.cc/150?u=u3' },
     { id: 'u4', name: 'Martin Kučera', role: 'WAREHOUSE', branchId: 'b3', avatar: 'https://i.pravatar.cc/150?u=u4' },
     { id: 'u5', name: 'Lucie Veselá', role: 'MANAGER', branchId: 'b4', avatar: 'https://i.pravatar.cc/150?u=u5' },
+    // Expanded Users
+    { id: 'u6', name: 'Tomáš Černý', role: 'DRIVER', branchId: 'b1', avatar: 'https://i.pravatar.cc/150?u=u6' },
+    { id: 'u7', name: 'Eva Procházková', role: 'WAREHOUSE', branchId: 'b2', avatar: 'https://i.pravatar.cc/150?u=u7' },
+    { id: 'u8', name: 'Michal Horák', role: 'MANAGER', branchId: 'b3', avatar: 'https://i.pravatar.cc/150?u=u8' },
+    { id: 'u9', name: 'Kateřina Němcová', role: 'CEO', avatar: 'https://i.pravatar.cc/150?u=u9' },
+    { id: 'u10', name: 'David Marek', role: 'DRIVER', branchId: 'b4', avatar: 'https://i.pravatar.cc/150?u=u10' },
+    { id: 'u11', name: 'Lenka Králová', role: 'WAREHOUSE', branchId: 'b1', avatar: 'https://i.pravatar.cc/150?u=u11' },
+    { id: 'u12', name: 'Jakub Pospíšil', role: 'MANAGER', branchId: 'b2', avatar: 'https://i.pravatar.cc/150?u=u12' },
+    { id: 'u13', name: 'Anna Fialová', role: 'DRIVER', branchId: 'b3', avatar: 'https://i.pravatar.cc/150?u=u13' },
+    { id: 'u14', name: 'Ondřej Beneš', role: 'WAREHOUSE', branchId: 'b4', avatar: 'https://i.pravatar.cc/150?u=u14' },
+    { id: 'u15', name: 'Martina Vlčková', role: 'MANAGER', branchId: 'b1', avatar: 'https://i.pravatar.cc/150?u=u15' },
 ];
 
 export const MOCK_PRODUCTS: Product[] = [
@@ -100,6 +111,98 @@ export const MOCK_PRODUCTS: Product[] = [
         minStockLevel: 100,
         unit: 'ks'
     },
+    // Expanded Products
+    {
+        id: 'p8',
+        code: 'BAG-008',
+        name: 'Bageta Sýrová',
+        category: 'BAGUETTE',
+        price: 85,
+        cost: 42,
+        image: 'https://images.unsplash.com/photo-1626078299034-7bb6d5d8957d?auto=format&fit=crop&w=600&q=80',
+        status: 'ACTIVE',
+        stockLevel: 100,
+        minStockLevel: 40,
+        unit: 'ks'
+    },
+    {
+        id: 'p9',
+        code: 'SND-009',
+        name: 'Sendvič Vajíčkový',
+        category: 'SANDWICH',
+        price: 69,
+        cost: 35,
+        image: 'https://images.unsplash.com/photo-1553909489-cd47e3b4430f?auto=format&fit=crop&w=600&q=80',
+        status: 'ACTIVE',
+        stockLevel: 70,
+        minStockLevel: 30,
+        unit: 'ks'
+    },
+    {
+        id: 'p10',
+        code: 'PAN-010',
+        name: 'Panini Mozzarella',
+        category: 'BAGUETTE',
+        price: 99,
+        cost: 50,
+        image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80',
+        status: 'ACTIVE',
+        stockLevel: 180,
+        minStockLevel: 60,
+        unit: 'ks'
+    },
+    {
+        id: 'p11',
+        code: 'PIZ-011',
+        name: '360 Pizza Quattro Formaggi',
+        category: 'PIZZA',
+        price: 199,
+        cost: 85,
+        image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
+        status: 'ACTIVE',
+        stockLevel: 30,
+        minStockLevel: 15,
+        unit: 'ks'
+    },
+    {
+        id: 'p12',
+        code: 'DRK-012',
+        name: 'Limonáda Citron',
+        category: 'DRINK',
+        price: 39,
+        cost: 15,
+        image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80',
+        status: 'ACTIVE',
+        stockLevel: 400,
+        minStockLevel: 120,
+        unit: 'ks'
+    },
+    {
+        id: 'p13',
+        code: 'BAG-013',
+        name: 'Bageta Kuřecí Strips',
+        category: 'BAGUETTE',
+        price: 95,
+        cost: 48,
+        image: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=600&q=80',
+        status: 'ACTIVE',
+        stockLevel: 130,
+        minStockLevel: 45,
+        unit: 'ks'
+    },
+    {
+        id: 'p14',
+        code: 'SND-014',
+        name: 'Wrap Caesar',
+        category: 'SANDWICH',
+        price: 89,
+        cost: 44,
+        image: 'https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=600&q=80',
+        status: 'ACTIVE',
+        stockLevel: 90,
+        minStockLevel: 35,
+        unit: 'ks'
+    },
     {
         id: 'ing1',
         code: 'ING-001',
@@ -150,6 +253,59 @@ export const MOCK_PRODUCTS: Product[] = [
         status: 'ACTIVE',
         stockLevel: 500,
         minStockLevel: 100,
+        unit: 'kg'
+    },
+    // Expanded Ingredients
+    {
+        id: 'ing5',
+        code: 'ING-005',
+        name: 'Ledový salát',
+        category: 'INGREDIENT',
+        price: 35,
+        cost: 35,
+        image: 'https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=600&q=80',
+        status: 'ACTIVE',
+        stockLevel: 200,
+        minStockLevel: 50,
+        unit: 'kg'
+    },
+    {
+        id: 'ing6',
+        code: 'ING-006',
+        name: 'Kuřecí prsa',
+        category: 'INGREDIENT',
+        price: 160,
+        cost: 160,
+        image: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=600&q=80',
+        status: 'ACTIVE',
+        stockLevel: 300,
+        minStockLevel: 100,
+        unit: 'kg'
+    },
+    {
+        id: 'ing7',
+        code: 'ING-007',
+        name: 'Majonéza',
+        category: 'INGREDIENT',
+        price: 90,
+        cost: 90,
+        image: 'https://images.unsplash.com/photo-1585325701165-351af916e581?auto=format&fit=crop&w=600&q=80',
+        status: 'ACTIVE',
+        stockLevel: 150,
+        minStockLevel: 40,
+        unit: 'kg'
+    },
+    {
+        id: 'ing8',
+        code: 'ING-008',
+        name: 'Okurka salátová',
+        category: 'INGREDIENT',
+        price: 40,
+        cost: 40,
+        image: 'https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?auto=format&fit=crop&w=600&q=80',
+        status: 'ACTIVE',
+        stockLevel: 180,
+        minStockLevel: 60,
         unit: 'kg'
     }
 ];
@@ -215,125 +371,123 @@ export const MOCK_ORDERS: Order[] = [
         ],
         totalPrice: 3955
     },
+    // Expanded Orders
     {
-        id: 'ord-001',
-        branchId: 'b1',
-        branchName: 'BB Václavské náměstí',
-        createdAt: new Date(Date.now() - 1000 * 60 * 30).toISOString(), // 30 mins ago
-        status: 'NEW',
-        items: [
-            { productId: 'p1', productName: 'Bageta Šunková', quantity: 50, price: 89 },
-            { productId: 'p2', productName: 'Crocodille Sendvič', quantity: 30, price: 75 },
-            { productId: 'p7', productName: 'Ledový čaj Broskev', quantity: 40, price: 45 },
-        ],
-        totalPrice: 8500
-    },
-    {
-        id: 'ord-002',
+        id: 'ord-006',
         branchId: 'b2',
         branchName: 'BB Arkády Pankrác',
-        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2).toISOString(), // 2 hours ago
-        status: 'APPROVED',
+        createdAt: new Date(Date.now() - 1000 * 60 * 45).toISOString(),
+        status: 'NEW',
         items: [
-            { productId: 'p4', productName: '360 Pizza Salami', quantity: 20, price: 189 },
-            { productId: 'p5', productName: 'Bageta Debrecínská', quantity: 15, price: 92 },
+            { productId: 'p8', productName: 'Bageta Sýrová', quantity: 40, price: 85 },
+            { productId: 'p12', productName: 'Limonáda Citron', quantity: 60, price: 39 },
         ],
-        totalPrice: 5160
+        totalPrice: 5740
     },
     {
-        id: 'ord-003',
+        id: 'ord-007',
         branchId: 'b3',
         branchName: 'Výroba Žiželice',
-        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24).toISOString(), // 1 day ago
-        status: 'SHIPPED',
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 3).toISOString(),
+        status: 'APPROVED',
         items: [
-            { productId: 'ing1', productName: 'Mouka pšeničná hladká', quantity: 1500, price: 15 },
-            { productId: 'ing4', productName: 'Rajčata čerstvá', quantity: 300, price: 45 },
+            { productId: 'ing2', productName: 'Šunka výběrová', quantity: 50, price: 250 },
+            { productId: 'ing3', productName: 'Sýr Eidam 30%', quantity: 40, price: 180 },
         ],
-        totalPrice: 36000
+        totalPrice: 19700
     },
     {
-        id: 'ord-004',
+        id: 'ord-008',
         branchId: 'b4',
         branchName: 'BB Letňany',
-        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 5).toISOString(), // 5 hours ago
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 6).toISOString(),
+        status: 'SHIPPED',
+        items: [
+            { productId: 'p10', productName: 'Panini Mozzarella', quantity: 30, price: 99 },
+            { productId: 'p14', productName: 'Wrap Caesar', quantity: 25, price: 89 },
+        ],
+        totalPrice: 5195
+    },
+    {
+        id: 'ord-009',
+        branchId: 'b1',
+        branchName: 'BB Václavské náměstí',
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 26).toISOString(),
         status: 'DELIVERED',
         items: [
-            { productId: 'p1', productName: 'Bageta Šunková', quantity: 100, price: 89 },
+            { productId: 'p11', productName: '360 Pizza Quattro Formaggi', quantity: 15, price: 199 },
         ],
-        totalPrice: 8900
+        totalPrice: 2985
     },
     {
-        id: 'ord-005',
-        branchId: 'b1',
-        branchName: 'BB Václavské náměstí',
-        createdAt: new Date(Date.now() - 1000 * 60 * 15).toISOString(), // 15 mins ago
-        status: 'NEW',
-        items: [
-            { productId: 'p3', productName: 'Panini s kuřecím', quantity: 75, price: 95 },
-            { productId: 'p6', productName: 'Sendvič Tuňákový', quantity: 50, price: 79 },
-        ],
-        totalPrice: 11075
-    },
-    {
-        id: 'ord-001',
-        branchId: 'b1',
-        branchName: 'BB Václavské náměstí',
-        createdAt: new Date(Date.now() - 1000 * 60 * 30).toISOString(), // 30 mins ago
-        status: 'NEW',
-        items: [
-            { productId: 'p1', productName: 'Bageta Šunková', quantity: 50, price: 89 },
-            { productId: 'p2', productName: 'Crocodille Sendvič', quantity: 30, price: 75 },
-            { productId: 'p7', productName: 'Ledový čaj Broskev', quantity: 40, price: 45 },
-        ],
-        totalPrice: 8500
-    },
-    {
-        id: 'ord-002',
+        id: 'ord-010',
         branchId: 'b2',
         branchName: 'BB Arkády Pankrác',
-        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2).toISOString(), // 2 hours ago
-        status: 'APPROVED',
-        items: [
-            { productId: 'p4', productName: '360 Pizza Salami', quantity: 20, price: 189 },
-            { productId: 'p5', productName: 'Bageta Debrecínská', quantity: 15, price: 92 },
-        ],
-        totalPrice: 5160
-    },
-    {
-        id: 'ord-003',
-        branchId: 'b3',
-        branchName: 'Výroba Žiželice',
-        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24).toISOString(), // 1 day ago
-        status: 'SHIPPED',
-        items: [
-            { productId: 'ing1', productName: 'Mouka pšeničná hladká', quantity: 1000, price: 15 },
-            { productId: 'ing4', productName: 'Rajčata čerstvá', quantity: 200, price: 45 },
-        ],
-        totalPrice: 24000
-    },
-    {
-        id: 'ord-004',
-        branchId: 'b4',
-        branchName: 'BB Letňany',
-        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 5).toISOString(), // 5 hours ago
-        status: 'DELIVERED',
-        items: [
-            { productId: 'p1', productName: 'Bageta Šunková', quantity: 200, price: 89 },
-        ],
-        totalPrice: 17800
-    },
-    {
-        id: 'ord-005',
-        branchId: 'b1',
-        branchName: 'BB Václavské náměstí',
-        createdAt: new Date(Date.now() - 1000 * 60 * 15).toISOString(), // 15 mins ago
+        createdAt: new Date(Date.now() - 1000 * 60 * 10).toISOString(),
         status: 'NEW',
         items: [
-            { productId: 'p3', productName: 'Panini s kuřecím', quantity: 250, price: 95 },
-            { productId: 'p6', productName: 'Sendvič Tuňákový', quantity: 200, price: 79 },
+            { productId: 'p9', productName: 'Sendvič Vajíčkový', quantity: 35, price: 69 },
+            { productId: 'p13', productName: 'Bageta Kuřecí Strips', quantity: 20, price: 95 },
         ],
-        totalPrice: 39550
+        totalPrice: 4315
+    },
+    {
+        id: 'ord-011',
+        branchId: 'b3',
+        branchName: 'Výroba Žiželice',
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 4).toISOString(),
+        status: 'APPROVED',
+        items: [
+            { productId: 'ing5', productName: 'Ledový salát', quantity: 100, price: 35 },
+            { productId: 'ing6', productName: 'Kuřecí prsa', quantity: 50, price: 160 },
+        ],
+        totalPrice: 11500
+    },
+    {
+        id: 'ord-012',
+        branchId: 'b4',
+        branchName: 'BB Letňany',
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 48).toISOString(),
+        status: 'DELIVERED',
+        items: [
+            { productId: 'p1', productName: 'Bageta Šunková', quantity: 80, price: 89 },
+            { productId: 'p7', productName: 'Ledový čaj Broskev', quantity: 80, price: 45 },
+        ],
+        totalPrice: 10720
+    },
+    {
+        id: 'ord-013',
+        branchId: 'b1',
+        branchName: 'BB Václavské náměstí',
+        createdAt: new Date(Date.now() - 1000 * 60 * 5).toISOString(),
+        status: 'NEW',
+        items: [
+            { productId: 'p5', productName: 'Bageta Debrecínská', quantity: 45, price: 92 },
+        ],
+        totalPrice: 4140
+    },
+    {
+        id: 'ord-014',
+        branchId: 'b2',
+        branchName: 'BB Arkády Pankrác',
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 1).toISOString(),
+        status: 'APPROVED',
+        items: [
+            { productId: 'p2', productName: 'Crocodille Sendvič', quantity: 60, price: 75 },
+        ],
+        totalPrice: 4500
+    },
+    {
+        id: 'ord-015',
+        branchId: 'b3',
+        branchName: 'Výroba Žiželice',
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 12).toISOString(),
+        status: 'SHIPPED',
+        items: [
+            { productId: 'ing7', productName: 'Majonéza', quantity: 20, price: 90 },
+            { productId: 'ing8', productName: 'Okurka salátová', quantity: 30, price: 40 },
+        ],
+        totalPrice: 3000
     }
 ];
 
@@ -372,6 +526,79 @@ export const mockProductionTasks: import('../types').ProductionTask[] = [
         unit: 'ks',
         priority: 'NORMAL',
         startTime: '10:00',
+        status: 'COMPLETED'
+    },
+    // Expanded Tasks
+    {
+        id: 't5',
+        productName: 'Bageta Sýrová',
+        quantity: 120,
+        unit: 'ks',
+        priority: 'HIGH',
+        startTime: '07:00',
+        assignedTo: 'Petr S.',
+        status: 'IN_PROGRESS'
+    },
+    {
+        id: 't6',
+        productName: 'Sendvič Vajíčkový',
+        quantity: 90,
+        unit: 'ks',
+        priority: 'NORMAL',
+        startTime: '09:00',
+        status: 'PLANNED'
+    },
+    {
+        id: 't7',
+        productName: 'Panini Mozzarella',
+        quantity: 150,
+        unit: 'ks',
+        priority: 'LOW',
+        status: 'PLANNED'
+    },
+    {
+        id: 't8',
+        productName: '360 Pizza Quattro Formaggi',
+        quantity: 60,
+        unit: 'ks',
+        priority: 'NORMAL',
+        startTime: '11:00',
+        status: 'COMPLETED'
+    },
+    {
+        id: 't9',
+        productName: 'Bageta Kuřecí Strips',
+        quantity: 100,
+        unit: 'ks',
+        priority: 'HIGH',
+        startTime: '06:30',
+        assignedTo: 'Eva P.',
+        status: 'IN_PROGRESS'
+    },
+    {
+        id: 't10',
+        productName: 'Wrap Caesar',
+        quantity: 80,
+        unit: 'ks',
+        priority: 'NORMAL',
+        startTime: '08:30',
+        status: 'PLANNED'
+    },
+    {
+        id: 't11',
+        productName: 'Limonáda Citron',
+        quantity: 300,
+        unit: 'ks',
+        priority: 'LOW',
+        status: 'PLANNED'
+    },
+    {
+        id: 't12',
+        productName: 'Bageta Debrecínská',
+        quantity: 110,
+        unit: 'ks',
+        priority: 'NORMAL',
+        startTime: '10:30',
         status: 'COMPLETED'
     }
 ];
