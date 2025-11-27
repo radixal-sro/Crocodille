@@ -4,13 +4,15 @@ import type { Order } from '../types';
 import { Table, TableHeader, TableRow, TableHead, TableCell } from '../components/ui/Table';
 import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
-import { Eye, Loader2 } from 'lucide-react';
+import { Eye, Loader2, ArrowUpDown, Filter } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { useNavigate } from 'react-router-dom';
 
 const Orders = () => {
     const [orders, setOrders] = useState<Order[]>([]);
     const [loading, setLoading] = useState(true);
+    const [sortConfig, setSortConfig] = useState<{ key: keyof Order; direction: 'asc' | 'desc' } | null>(null);
+    const [statusFilter, setStatusFilter] = useState<string>('ALL');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -27,6 +29,29 @@ const Orders = () => {
         };
         loadOrders();
     }, []);
+
+    const handleSort = (key: keyof Order) => {
+        let direction: 'asc' | 'desc' = 'asc';
+        if (sortConfig && sortConfig.key === key && sortConfig.direction === 'asc') {
+            direction = 'desc';
+        }
+        setSortConfig({ key, direction });
+    };
+
+    const filteredAndSortedOrders = orders
+        .filter(order => statusFilter === 'ALL' || order.status === statusFilter)
+        .sort((a, b) => {
+            if (!sortConfig) return 0;
+            const { key, direction } = sortConfig;
+
+            if (a[key] < b[key]) {
+                return direction === 'asc' ? -1 : 1;
+            }
+            if (a[key] > b[key]) {
+                return direction === 'asc' ? 1 : -1;
+            }
+            return 0;
+        });
 
     const getStatusVariant = (status: Order['status']) => {
         switch (status) {
@@ -55,6 +80,22 @@ const Orders = () => {
                     <h1 className="text-2xl font-display font-bold text-slate-900">Objednávky</h1>
                     <p className="text-slate-500">Přehled objednávek z poboček.</p>
                 </div>
+                <div className="flex items-center gap-2">
+                    <div className="relative">
+                        <select
+                            value={statusFilter}
+                            onChange={(e) => setStatusFilter(e.target.value)}
+                            className="pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-croco-green/20 focus:border-croco-green appearance-none cursor-pointer"
+                        >
+                            <option value="ALL">Všechny stavy</option>
+                            <option value="NEW">Nová</option>
+                            <option value="APPROVED">Schválená</option>
+                            <option value="SHIPPED">Odeslaná</option>
+                            <option value="DELIVERED">Doručená</option>
+                        </select>
+                        <Filter className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" size={16} />
+                    </div>
+                </div>
             </div>
 
             <Card className="overflow-hidden">
@@ -66,17 +107,37 @@ const Orders = () => {
                     <Table>
                         <TableHeader>
                             <TableRow>
-                                <TableHead>ID Objednávky</TableHead>
+                                <TableHead className="cursor-pointer hover:bg-slate-50" onClick={() => handleSort('id')}>
+                                    <div className="flex items-center gap-1">
+                                        ID Objednávky
+                                        <ArrowUpDown size={14} className="text-slate-400" />
+                                    </div>
+                                </TableHead>
                                 <TableHead>Pobočka</TableHead>
-                                <TableHead>Datum</TableHead>
+                                <TableHead className="cursor-pointer hover:bg-slate-50" onClick={() => handleSort('createdAt')}>
+                                    <div className="flex items-center gap-1">
+                                        Datum
+                                        <ArrowUpDown size={14} className="text-slate-400" />
+                                    </div>
+                                </TableHead>
                                 <TableHead>Položky</TableHead>
-                                <TableHead>Cena celkem</TableHead>
-                                <TableHead>Stav</TableHead>
+                                <TableHead className="cursor-pointer hover:bg-slate-50" onClick={() => handleSort('totalPrice')}>
+                                    <div className="flex items-center gap-1">
+                                        Cena celkem
+                                        <ArrowUpDown size={14} className="text-slate-400" />
+                                    </div>
+                                </TableHead>
+                                <TableHead className="cursor-pointer hover:bg-slate-50" onClick={() => handleSort('status')}>
+                                    <div className="flex items-center gap-1">
+                                        Stav
+                                        <ArrowUpDown size={14} className="text-slate-400" />
+                                    </div>
+                                </TableHead>
                                 <TableHead className="text-right">Akce</TableHead>
                             </TableRow>
                         </TableHeader>
                         <tbody>
-                            {orders.map((order) => (
+                            {filteredAndSortedOrders.map((order) => (
                                 <TableRow key={order.id}>
                                     <TableCell className="font-medium text-slate-900">{order.id}</TableCell>
                                     <TableCell>{order.branchName}</TableCell>

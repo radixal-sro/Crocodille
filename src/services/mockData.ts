@@ -214,6 +214,126 @@ export const MOCK_ORDERS: Order[] = [
             { productId: 'p6', productName: 'Sendvič Tuňákový', quantity: 20, price: 79 },
         ],
         totalPrice: 3955
+    },
+    {
+        id: 'ord-001',
+        branchId: 'b1',
+        branchName: 'BB Václavské náměstí',
+        createdAt: new Date(Date.now() - 1000 * 60 * 30).toISOString(), // 30 mins ago
+        status: 'NEW',
+        items: [
+            { productId: 'p1', productName: 'Bageta Šunková', quantity: 50, price: 89 },
+            { productId: 'p2', productName: 'Crocodille Sendvič', quantity: 30, price: 75 },
+            { productId: 'p7', productName: 'Ledový čaj Broskev', quantity: 40, price: 45 },
+        ],
+        totalPrice: 8500
+    },
+    {
+        id: 'ord-002',
+        branchId: 'b2',
+        branchName: 'BB Arkády Pankrác',
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2).toISOString(), // 2 hours ago
+        status: 'APPROVED',
+        items: [
+            { productId: 'p4', productName: '360 Pizza Salami', quantity: 20, price: 189 },
+            { productId: 'p5', productName: 'Bageta Debrecínská', quantity: 15, price: 92 },
+        ],
+        totalPrice: 5160
+    },
+    {
+        id: 'ord-003',
+        branchId: 'b3',
+        branchName: 'Výroba Žiželice',
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24).toISOString(), // 1 day ago
+        status: 'SHIPPED',
+        items: [
+            { productId: 'ing1', productName: 'Mouka pšeničná hladká', quantity: 1500, price: 15 },
+            { productId: 'ing4', productName: 'Rajčata čerstvá', quantity: 300, price: 45 },
+        ],
+        totalPrice: 36000
+    },
+    {
+        id: 'ord-004',
+        branchId: 'b4',
+        branchName: 'BB Letňany',
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 5).toISOString(), // 5 hours ago
+        status: 'DELIVERED',
+        items: [
+            { productId: 'p1', productName: 'Bageta Šunková', quantity: 100, price: 89 },
+        ],
+        totalPrice: 8900
+    },
+    {
+        id: 'ord-005',
+        branchId: 'b1',
+        branchName: 'BB Václavské náměstí',
+        createdAt: new Date(Date.now() - 1000 * 60 * 15).toISOString(), // 15 mins ago
+        status: 'NEW',
+        items: [
+            { productId: 'p3', productName: 'Panini s kuřecím', quantity: 75, price: 95 },
+            { productId: 'p6', productName: 'Sendvič Tuňákový', quantity: 50, price: 79 },
+        ],
+        totalPrice: 11075
+    },
+    {
+        id: 'ord-001',
+        branchId: 'b1',
+        branchName: 'BB Václavské náměstí',
+        createdAt: new Date(Date.now() - 1000 * 60 * 30).toISOString(), // 30 mins ago
+        status: 'NEW',
+        items: [
+            { productId: 'p1', productName: 'Bageta Šunková', quantity: 50, price: 89 },
+            { productId: 'p2', productName: 'Crocodille Sendvič', quantity: 30, price: 75 },
+            { productId: 'p7', productName: 'Ledový čaj Broskev', quantity: 40, price: 45 },
+        ],
+        totalPrice: 8500
+    },
+    {
+        id: 'ord-002',
+        branchId: 'b2',
+        branchName: 'BB Arkády Pankrác',
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 2).toISOString(), // 2 hours ago
+        status: 'APPROVED',
+        items: [
+            { productId: 'p4', productName: '360 Pizza Salami', quantity: 20, price: 189 },
+            { productId: 'p5', productName: 'Bageta Debrecínská', quantity: 15, price: 92 },
+        ],
+        totalPrice: 5160
+    },
+    {
+        id: 'ord-003',
+        branchId: 'b3',
+        branchName: 'Výroba Žiželice',
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24).toISOString(), // 1 day ago
+        status: 'SHIPPED',
+        items: [
+            { productId: 'ing1', productName: 'Mouka pšeničná hladká', quantity: 1000, price: 15 },
+            { productId: 'ing4', productName: 'Rajčata čerstvá', quantity: 200, price: 45 },
+        ],
+        totalPrice: 24000
+    },
+    {
+        id: 'ord-004',
+        branchId: 'b4',
+        branchName: 'BB Letňany',
+        createdAt: new Date(Date.now() - 1000 * 60 * 60 * 5).toISOString(), // 5 hours ago
+        status: 'DELIVERED',
+        items: [
+            { productId: 'p1', productName: 'Bageta Šunková', quantity: 200, price: 89 },
+        ],
+        totalPrice: 17800
+    },
+    {
+        id: 'ord-005',
+        branchId: 'b1',
+        branchName: 'BB Václavské náměstí',
+        createdAt: new Date(Date.now() - 1000 * 60 * 15).toISOString(), // 15 mins ago
+        status: 'NEW',
+        items: [
+            { productId: 'p3', productName: 'Panini s kuřecím', quantity: 250, price: 95 },
+            { productId: 'p6', productName: 'Sendvič Tuňákový', quantity: 200, price: 79 },
+        ],
+        totalPrice: 39550
     }
 ];
 

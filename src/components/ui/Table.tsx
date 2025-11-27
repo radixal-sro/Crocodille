@@ -28,8 +28,11 @@ export const TableRow = ({ children, className, onClick }: { children: React.Rea
     </tr>
 );
 
-export const TableHead = ({ children, className }: { children: React.ReactNode; className?: string }) => (
-    <th className={clsx("h-10 px-4 text-slate-500 font-medium", className)}>
+export const TableHead = ({ children, className, onClick }: { children: React.ReactNode; className?: string; onClick?: () => void }) => (
+    <th
+        onClick={onClick}
+        className={clsx("h-10 px-4 text-slate-500 font-medium", className)}
+    >
         {children}
     </th>
 );
