@@ -3,24 +3,27 @@ import { NavLink } from 'react-router-dom';
 import {
     LayoutDashboard,
     ShoppingBag,
+    ClipboardList,
     Package,
+    Factory,
     Truck,
+    Users,
+    LogOut,
     Settings,
     ChevronLeft,
-    ChevronRight,
-    Menu,
-    ClipboardList
+    ChevronRight
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
 
 const NAV_ITEMS = [
-    { icon: LayoutDashboard, label: 'Dashboard', path: '/' },
+    { icon: LayoutDashboard, label: 'Přehled', path: '/' },
     { icon: ShoppingBag, label: 'Katalog', path: '/catalog' },
     { icon: ClipboardList, label: 'Objednávky', path: '/orders' },
     { icon: Package, label: 'Sklad', path: '/inventory' },
+    { icon: Factory, label: 'Výroba', path: '/production' },
     { icon: Truck, label: 'Logistika', path: '/logistics' },
-    { icon: Settings, label: 'Admin', path: '/admin' },
+    { icon: Users, label: 'Uživatelé', path: '/users' },
 ];
 
 export const Sidebar = () => {

@@ -8,6 +8,8 @@ import Catalog from './pages/Catalog';
 import Orders from './pages/Orders';
 import Inventory from './pages/Inventory';
 import Production from './pages/Production';
+import Logistics from './pages/Logistics';
+import Users from './pages/Users';
 
 function App() {
     return (
@@ -20,6 +22,8 @@ function App() {
                         <Route path="orders" element={<Orders />} />
                         <Route path="inventory" element={<Inventory />} />
                         <Route path="production" element={<Production />} />
+                        <Route path="logistics" element={<Logistics />} />
+                        <Route path="users" element={<Users />} />
                         <Route path="*" element={<Navigate to="/" replace />} />
                     </Route>
                 </Routes>
