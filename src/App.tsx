@@ -6,7 +6,8 @@ import { CartProvider } from './context/CartContext';
 import Dashboard from './pages/Dashboard';
 import Catalog from './pages/Catalog';
 import Orders from './pages/Orders';
-const Inventory = () => <h1 className="text-2xl font-bold">Sklad</h1>;
+import Inventory from './pages/Inventory';
+import Production from './pages/Production';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                         <Route path="catalog" element={<Catalog />} />
                         <Route path="orders" element={<Orders />} />
                         <Route path="inventory" element={<Inventory />} />
+                        <Route path="production" element={<Production />} />
                         <Route path="*" element={<Navigate to="/" replace />} />
                     </Route>
                 </Routes>
