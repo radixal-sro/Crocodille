@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Truck, MapPin, Thermometer, Clock, Navigation, CheckCircle, AlertTriangle } from 'lucide-react';
+import { Truck, MapPin, Thermometer, Navigation } from 'lucide-react';
 import clsx from 'clsx';
 import { MOCK_ROUTES } from '../../services/mockData';
 

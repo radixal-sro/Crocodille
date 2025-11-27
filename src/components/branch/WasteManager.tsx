@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Trash2, AlertTriangle, Save, RefreshCw, Minus, Plus } from 'lucide-react';
+import { Trash2, Save, RefreshCw, Minus, Plus } from 'lucide-react';
 import clsx from 'clsx';
 import { MOCK_PRODUCTS, WASTE_REASONS } from '../../services/mockData';
 import { Button } from '../ui/Button';

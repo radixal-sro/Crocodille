@@ -1,6 +1,5 @@
-import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Package, Activity, AlertCircle } from 'lucide-react';
+import { ArrowLeft, Package, Activity } from 'lucide-react';
 import { MOCK_PRODUCTS } from '../services/mockData';
 import { RecipeVisualizer } from '../components/product/RecipeVisualizer';
 import { Badge } from '../components/ui/Badge';
@@ -93,7 +92,7 @@ export const ProductDetail = () => {
                                 <Activity className="w-6 h-6 text-crocodille-green" />
                                 Visual Recipe Inspector
                             </h2>
-                            <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
+                            <Badge variant="neutral" className="bg-blue-50 text-blue-700 border-blue-200">
                                 v2.0 Beta
                             </Badge>
                         </div>

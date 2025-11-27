@@ -1,4 +1,3 @@
-import React from 'react';
 import { WasteManager } from '../components/branch/WasteManager';
 import { Badge } from '../components/ui/Badge';
 

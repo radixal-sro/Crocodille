@@ -1,5 +1,4 @@
-import React from 'react';
-import { Truck, Map, Calendar, Users, CheckCircle, AlertTriangle } from 'lucide-react';
+import { Truck, Calendar, Users, CheckCircle, AlertTriangle } from 'lucide-react';
 import { LogisticsMap } from '../components/logistics/LogisticsMap';
 
 export const Logistics = () => {
