@@ -9,7 +9,8 @@ import {
     Truck,
     Users,
     ChevronRight,
-    ChevronLeft
+    ChevronLeft,
+    Trash2
 } from 'lucide-react';
 import clsx from 'clsx';
 
@@ -18,6 +19,7 @@ const NAV_ITEMS = [
     { icon: ClipboardList, label: 'Objednávky', path: '/orders' },
     { icon: Package, label: 'Sklad', path: '/inventory' },
     { icon: Factory, label: 'Výroba', path: '/production' },
+    { icon: Trash2, label: 'Odpis Zboží', path: '/waste-control' },
     { icon: Truck, label: 'Logistika', path: '/logistics' },
     { icon: Users, label: 'Uživatelé', path: '/users' },
 ];

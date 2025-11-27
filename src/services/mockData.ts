@@ -602,3 +602,78 @@ export const mockProductionTasks: import('../types').ProductionTask[] = [
         status: 'COMPLETED'
     }
 ];
+
+export const MOCK_ROUTES = [
+    {
+        id: 'r1',
+        name: 'Trasa Praha-Sever',
+        status: 'ON_ROAD',
+        progress: 65,
+        driver: 'Karel Novotný',
+        vehicle: 'Mercedes Sprinter 4A2 3399',
+        temperature: 3.5,
+        stopsRemaining: 4,
+        totalStops: 12,
+        coordinates: { x: 45, y: 30 } // Mock coordinates for map
+    },
+    {
+        id: 'r2',
+        name: 'Trasa Brno-Město',
+        status: 'DELIVERED',
+        progress: 100,
+        driver: 'Petr Rychlý',
+        vehicle: 'Ford Transit 2B5 1122',
+        temperature: 4.2,
+        stopsRemaining: 0,
+        totalStops: 8,
+        coordinates: { x: 75, y: 60 }
+    },
+    {
+        id: 'r3',
+        name: 'Ranní závoz Pankrác',
+        status: 'LOADING',
+        progress: 15,
+        driver: 'Jan Smutný',
+        vehicle: 'Iveco Daily 5E3 9988',
+        temperature: 5.1,
+        stopsRemaining: 15,
+        totalStops: 15,
+        coordinates: { x: 20, y: 80 }
+    },
+    {
+        id: 'r4',
+        name: 'Noční závoz Crossdock Brno',
+        status: 'ON_ROAD',
+        progress: 40,
+        driver: 'Milan Veselý',
+        vehicle: 'Scania R450',
+        temperature: 2.1,
+        stopsRemaining: 2,
+        totalStops: 3,
+        coordinates: { x: 60, y: 20 }
+    }
+];
+
+export const MOCK_RECIPES: Record<string, { layer: string; ingredient: string; amount: string; cost: number; supplier: string; allergens: string[] }[]> = {
+    'p1': [ // Bageta Šunková
+        { layer: 'Horní pečivo', ingredient: 'Bageta světlá 120g', amount: '60g', cost: 3.5, supplier: 'La Lorraine', allergens: ['1', '3', '7'] },
+        { layer: 'Zelenina', ingredient: 'Ledový salát krájený', amount: '20g', cost: 2.0, supplier: 'Hortim', allergens: [] },
+        { layer: 'Hlavní surovina', ingredient: 'Šunka výběrová', amount: '40g', cost: 8.5, supplier: 'Le & Co', allergens: [] },
+        { layer: 'Spodní mazání', ingredient: 'Dresink Caesar', amount: '15g', cost: 3.0, supplier: 'Spak', allergens: ['3', '7', '10'] },
+        { layer: 'Spodní pečivo', ingredient: 'Bageta světlá 120g', amount: '60g', cost: 3.5, supplier: 'La Lorraine', allergens: ['1', '3', '7'] },
+    ],
+    'p3': [ // Panini s kuřecím
+        { layer: 'Horní pečivo', ingredient: 'Panini pečivo', amount: '55g', cost: 4.0, supplier: 'La Lorraine', allergens: ['1'] },
+        { layer: 'Hlavní surovina', ingredient: 'Kuřecí prsa pečená', amount: '50g', cost: 12.0, supplier: 'Vodňanské kuře', allergens: [] },
+        { layer: 'Doplněk', ingredient: 'Sýr Mozzarella', amount: '20g', cost: 5.0, supplier: 'Madeta', allergens: ['7'] },
+        { layer: 'Spodní mazání', ingredient: 'Pesto Genovese', amount: '10g', cost: 4.5, supplier: 'Panzani', allergens: ['5', '7', '8'] },
+        { layer: 'Spodní pečivo', ingredient: 'Panini pečivo', amount: '55g', cost: 4.0, supplier: 'La Lorraine', allergens: ['1'] },
+    ]
+};
+
+export const WASTE_REASONS = [
+    { id: 'exp', label: 'Expirace', color: 'bg-red-100 text-red-700' },
+    { id: 'dmg', label: 'Poškozeno při výrobě', color: 'bg-orange-100 text-orange-700' },
+    { id: 'fall', label: 'Spadlo na zem', color: 'bg-yellow-100 text-yellow-700' },
+    { id: 'quality', label: 'Nekvalitní surovina', color: 'bg-slate-100 text-slate-700' },
+];

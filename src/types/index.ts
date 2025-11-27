@@ -1,7 +1,7 @@
 export interface User {
     id: string;
     name: string;
-    role: 'CEO' | 'MANAGER' | 'WAREHOUSE' | 'PRODUCTION' | 'LOGISTICS';
+    role: 'CEO' | 'MANAGER' | 'WAREHOUSE' | 'PRODUCTION' | 'LOGISTICS' | 'DRIVER';
     avatar?: string;
     branchId?: string;
 }
