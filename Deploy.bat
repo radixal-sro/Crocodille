@@ -33,7 +33,8 @@ kubectl config use-context client-admin@radixal-dev
 
 :: Apply Kubernetes manifests
 echo Applying K8s manifests...
-kubectl apply -f k8s.yaml
+kubectl apply -f k8s/
+
 
 :: Restart rollout deployment
 echo Restarting deployment...
