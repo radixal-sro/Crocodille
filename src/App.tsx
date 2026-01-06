@@ -16,7 +16,7 @@ import { WasteControl } from './pages/WasteControl';
 function App() {
     return (
         <CartProvider>
-            <BrowserRouter>
+            <BrowserRouter basename="/crocodille-erp">
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Dashboard />} />
